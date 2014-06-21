@@ -1,5 +1,5 @@
 # Below are two functions that are used to create a special object
-# that stores a square matrix and caches its inversion.
+# that stores a square matrix and caches its inverse.
 
 # makeCacheMatrix()
 # This function creates a special "matrix" object that can cache its inverse.
@@ -13,14 +13,18 @@ makeCacheMatrix <- function(x = matrix()) {
 				m <<- NULL
 			}
 
+	# it's a good idea to enclose single statements in braces
+	# the syntax checker in your brain will thank you
 	get <- function( ) {
 				x
 			}
 
+	# it's a good idea to enclose single statements in braces
 	setinverse <- function( inverse ) {
 					m <<- inverse
 				}
 
+	# it's a good idea to enclose single statements in braces
 	getinverse <- function( ) {
 					m
 				}
